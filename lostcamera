@@ -1,0 +1,56 @@
+function setup() {
+  createCanvas(400, 400);
+  blendMode(HARD_LIGHT); //Very harsh contrast
+  background(255, 255,255);
+  noStroke();
+
+}
+
+function draw()
+{
+  
+  fill(100);
+  rect(75,95,60,5,5); //Gray Rect Background
+  
+  fill(170,170,170);
+  rect(75,95,60,5,5); //Gray Rect Foreground
+  
+ /* fill(50);
+  rect(60, 100, 280, 160, 2); //Light Gray Rect
+  translate(0,-5); 
+  */
+  
+  fill(0);
+  rect(50, 100, 300, 175, 5, 5, 13, 13); //Dark Rect Background x,y,h,w,tl,tr,br,bl
+  
+  fill(190,190,190,75);
+  rect(50, 100, 300, 175, 5, 5, 13, 13); //Dark Rect Foreground x,y,h,w,tl,tr,br,bl
+  
+  fill(140);
+  ellipse(260,185,150,150); //Camera Lens x,y,h,w
+  
+  fill(180);
+  ellipse(260,185,120,120); //Camera Lens Part 2 x,y,h,w
+  
+  fill(90);
+  ellipse(260,185,70,70); //Camera Lens Part 3 x,y,h,w
+  
+  let c = color (176,224,230,100); //Blue Color
+  fill(c);
+  rect(230, 165, 60, 40, 10);
+  
+  push(); // push and pop
+  translate(260,185);
+  strokeWeight(5);
+  fill(120,255,255,150);
+  ellipse(0,0,33,33);
+  pop();
+  
+  fill(250,250,210,255);
+  rect(90, 115, 70, 20, 10) //Flash
+  
+  fill(190);
+  translate(190,118); //translate
+  ellipse(0, 0, 20, 20); //Flash component
+  
+}
